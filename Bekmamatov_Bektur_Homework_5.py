@@ -23,7 +23,7 @@ file_reader = open(file_path, mode='r', encoding='Latin-1')
 fullname = open(result_file_path, mode="w", encoding="Latin-1")
 my_text_2 = file_reader.read()
 
-searching_fullname = r"[A-Z]+[\w+-]+[a-z A-Z]+[\s]+[A-Z)\s+O'\s+[A-Z]+[A-Z}+[\w+-]\w+"
+searching_fullname = r"[A-Z][a-z]+[\s |]+\w+\w+[\w A-Z]+"
 results_all_fullname = re.findall(searching_fullname, my_text_2) 
 
 for i in results_all_fullname:
